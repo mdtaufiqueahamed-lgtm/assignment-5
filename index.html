@@ -6,20 +6,14 @@
 
 <title>GitHub Issues Tracker</title>
 
-<!-- Tailwind + DaisyUI -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body class="bg-gray-100">
 
-<!-- =========================
-     LOGIN PAGE SECTION
-     এই section login করার জন্য
-========================= -->
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
 
-<section id="login-section" class="min-h-screen flex justify-center items-center">
-
+<!-- Login Box -->
 <div class="bg-white p-10 rounded-xl shadow-lg w-96">
 
 <!-- Logo -->
@@ -32,218 +26,45 @@
 GitHub Issues Tracker
 </h2>
 
-<!-- Subtitle -->
 <p class="text-center text-gray-500 mb-6">
 Sign in to manage your issues
 </p>
 
-<h2 class="font-semibold py-2 ">Username</h2>
+<!-- Username -->
+<h3 class="font-semibold mb-1">Username</h3>
 
-<!-- Username Input -->
-<input 
+<input
 id="username"
 type="text"
 placeholder="Enter Username"
-class="input input-bordered w-full mb-3"
+class="border w-full p-2 rounded mb-3"
 />
-<h2 class="font-semibold py-2">Password</h2>
-<!-- Password Input -->
+
+<!-- Password -->
+<h3 class="font-semibold mb-1">Password</h3>
+
 <input
 id="password"
 type="password"
 placeholder="Enter Password"
-class="input input-bordered w-full mb-4"
+class="border w-full p-2 rounded mb-4"
 />
 
 <!-- Login Button -->
-<button id="login-btn" class="btn btn-primary w-full rounded-lg">
+<button
+id="login-btn"
+class="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded-lg">
+
 Sign In
+
 </button>
 
-<!-- Demo Credential Info -->
+<!-- Demo -->
 <p class="text-xs text-gray-400 text-center mt-3">
 Demo: admin / admin123
 </p>
 
 </div>
-
-</section>
-
-<!-- =========================
-     MAIN WEBSITE SECTION
-     login করার পরে এটা দেখাবে
-========================= -->
-
-<section id="main-section" class="hidden">
-
-<!-- =========================
-     NAVBAR SECTION
-     logo + search bar থাকবে
-========================= -->
-
-<nav class="navbar bg-white shadow px-10">
-
-<!-- Logo / Website Name -->
-<div class="flex-1">
-<h2 class="text-xl font-bold">
-Issue Tracker
-</h2>
-</div>
-
-<!-- Search Section -->
-<div class="flex gap-2">
-
-<input
-id="search-input"
-type="text"
-placeholder="Search issue..."
-class="input input-bordered"
-/>
-
-<button id="search-btn" class="btn btn-primary">
-Search
-</button>
-
-</div>
-
-</nav>
-
-
-<!-- =========================
-     TAB SECTION
-     All / Open / Closed
-========================= -->
-
-<section class="w-11/12 mx-auto mt-10">
-
-<div class="flex gap-4 mb-6">
-
-<button id="tab-all" class="btn btn-primary">
-All
-</button>
-
-<button id="tab-open" class="btn btn-outline">
-Open
-</button>
-
-<button id="tab-closed" class="btn btn-outline">
-Closed
-</button>
-
-</div>
-
-
-<!-- =========================
-     ISSUE COUNT + STATUS
-========================= -->
-
-<div class="flex justify-between items-center mb-6">
-
-<!-- Left side info -->
-<div class="flex items-center gap-3">
-
-<i class="fa-solid fa-code-branch"></i>
-
-<p>
-<span id="issue-count">0</span> Issues
-</p>
-
-</div>
-
-<!-- Right side markers -->
-<div class="flex gap-4">
-
-<p class="text-green-600">
-● Open
-</p>
-
-<p class="text-purple-600">
-● Closed
-</p>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     SPINNER
-     data load হলে দেখাবে
-========================= -->
-
-<section id="spinner" class="text-center py-10 hidden">
-
-<span class="loading loading-bars loading-lg"></span>
-
-</section>
-
-
-<!-- =========================
-     ISSUE CARD CONTAINER
-     এখানে JS দিয়ে card আসবে
-========================= -->
-
-<section 
-id="issues-container"
-class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-<!-- Example Card (JS দিয়ে replace হবে) -->
-
-<div class="bg-white p-5 rounded-lg shadow border-t-4 border-green-500">
-
-<h3 class="font-bold text-lg">
-Issue Title
-</h3>
-
-<p class="text-gray-500 text-sm">
-Issue description here
-</p>
-
-<div class="text-xs mt-3">
-Status: Open
-</div>
-
-</div>
-
-</section>
-
-</section>
-
-
-
-<!-- =========================
-     ISSUE DETAILS MODAL
-     card click করলে open হবে
-========================= -->
-
-<dialog id="issue-modal" class="modal">
-
-<div class="modal-box">
-
-<h3 class="font-bold text-lg">
-Issue Details
-</h3>
-
-<div id="issue-details">
-
-<!-- JS এখানে সব data বসাবে -->
-
-</div>
-
-<div class="modal-action">
-
-<form method="dialog">
-<button class="btn">
-Close
-</button>
-</form>
-
-</div>
-
-</div>
-
-</dialog>
-
 
 <script src="script.js"></script>
 
