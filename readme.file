@@ -1,0 +1,35 @@
+1️⃣ What is the difference between var, let, and const?
+
+Answer:
+var, let, এবং const দিয়ে JavaScript এ variable declare করা হয়।
+
+var → পুরোনো পদ্ধতি এবং আবার declare করা যায়।
+
+let → value change করা যায় কিন্তু আবার declare করা যায় না।
+
+const → value একবার দিলে আর change করা যায় না।
+
+2️⃣ What is the spread operator (...)?
+
+Answer:
+Spread operator (...) ব্যবহার করা হয় array বা object এর elements আলাদা করে ছড়িয়ে দিতে বা copy/merge করতে।
+
+3️⃣ What is the difference between map(), filter(), and forEach()?
+
+Answer:
+
+map() → array এর প্রতিটি element পরিবর্তন করে নতুন array তৈরি করে।
+
+filter() → condition অনুযায়ী কিছু element নিয়ে নতুন array তৈরি করে।
+
+forEach() → array এর প্রতিটি element এ কাজ করে কিন্তু নতুন array return করে না।
+
+4️⃣ What is an arrow function?
+
+Answer:
+Arrow function হলো JavaScript এ function লেখার ছোট এবং সহজ পদ্ধতি। এটি => চিহ্ন ব্যবহার করে লেখা হয়।
+
+5️⃣ What are template literals?
+
+Answer:
+Template literals হলো JavaScript এ string লেখার একটি পদ্ধতি যেখানে সহজে variable ব্যবহার করা যায়। এটি backtick ( ) ব্যবহার করে লেখা হয়।
