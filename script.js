@@ -131,9 +131,25 @@ issuesContainer.appendChild(card)
 
 loadIssues();
 
+// count section
 
+function loadIssues(status = 'all') {
+  fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
+    .then(res => res.json())
+    .then(data => {
+      let issues = data.data;
 
+      // ভুল সংশোধন ১: ফিল্টারিং লজিক (ট্যাব অনুযায়ী সংখ্যা বদলাবে)
+      if (status !== 'all') {
+        issues = issues.filter(issue => issue.status === status);
+      }
 
+      // ভুল সংশোধন ২: আইডি ঠিকভাবে ধরা এবং টেক্সট বসানো
+      const countDisplay = document.getElementById("issue-count");
+      if (countDisplay) {
+        countDisplay.innerText = `${issues.length} Issues`;
+      }
 
-
-
+      displayIssues(issues);
+    });
+}

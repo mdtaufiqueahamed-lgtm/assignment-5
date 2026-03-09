@@ -40,7 +40,7 @@
     <!-- NAVBAR  -->
     <section class="bg-white shadow p-4 flex justify-between items-center">
       
-        <div class="flex gap-2 ">
+        <div class="flex gap-2 items-center ">
         <img class="w-[36px]" src="./assets/github-logo.png" alt="">
         <h1 class="font-bold text-xl">GitHub Issues Tracker</h1>
       </div>
@@ -54,11 +54,35 @@
     </section>
 
     <!--  TABS  -->
-    <section class="bg-white shadow mt-4 mx-4 p-4 rounded flex flex-start gap-4 items-center">
+    <section class="bg-white shadow mt-2 mx-4 p-4 rounded flex flex-start gap-4 items-center">
       <button class="tab-btn px-5 py-1 bg-blue-500 text-white rounded" data-status="all">All</button>
       <button class="tab-btn px-5 py-1 bg-gray-200 rounded" data-status="open">Open</button>
       <button class="tab-btn px-5 py-1 bg-gray-200 rounded" data-status="closed">Closed</button>
     </section>
+
+    <!-- count section  -->
+     <section class="bg-white shadow mt-2 mx-4 p-4 rounded flex justify-between items-center">
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+      <i class="fa-solid fa-circle-nodes text-xl"></i>
+    </div>
+    <div>
+      <h2 id="issue-count" class="text-2xl font-bold text-gray-800">0 Issues</h2>
+      <p class="text-gray-500 text-sm">Track and manage your project issues</p>
+    </div>
+  </div>
+
+  <div class="flex gap-4 text-sm font-medium">
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+      <span>Open</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+      <span>Closed</span>
+    </div>
+  </div>
+</section>
 
     <!-- ISSUES GRID  -->
     <section id="issues-container" class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
