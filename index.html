@@ -11,19 +11,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
 
-<script src="https://cdn.tailwindcss.com"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/daisyui@5"></script>
+
 
   
 </head>
 <body class="bg-gray-100">
 
-  <!--  LOGIN PAGE -->
+  
   <section id="login-page" class="min-h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
+<div class="bg-white p-8 rounded shadow-md w-full max-w-sm">
       <div class="text-center mb-6">
-        <img class="mx-auto" src="./assets/github-logo.png " alt="">
+         <img class="mx-auto" src="./assets/github-logo.png " alt="">
         <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
         <p class="text-gray-500">Sign in to manage your issues</p>
       </div>
@@ -37,22 +36,22 @@
       </p>
       <p id="login-error" class="text-red-500 mt-2 text-sm hidden">Invaild Username Or Password</p>
     </div>
+
+
   </section>
 
-  <section id="loading" class="hidden text-center my-8">
-  <div class="border-4 border-t-4 border-gray-200 border-t-blue-500 rounded-full w-12 h-12 mx-auto animate-spin"></div>
-  <p class="mt-2 text-gray-500">Loading...</p>
-</section>
+  
 
-  <!--  MAIN PAGE  -->
+ 
   <section id="main-page" class="hidden flex flex-col min-h-screen">
 
-    <!-- NAVBAR  -->
+    
     <section class="bg-white shadow p-4 flex justify-between items-center">
       
         <div class="flex gap-2 items-center ">
         <img class="w-[36px]" src="./assets/github-logo.png" alt="">
         <h1 class="font-bold text-xl">GitHub Issues Tracker</h1>
+        
       </div>
       
       <div class="flex gap-2">
@@ -63,14 +62,14 @@
       
     </section>
 
-    <!--  TABS  -->
+   
     <section class="bg-white shadow mt-2 mx-4 p-4 rounded flex flex-start gap-4 items-center">
       <button class="tab-btn px-5 py-1 bg-blue-500 text-white rounded" data-status="all">All</button>
       <button class="tab-btn px-5 py-1 bg-gray-200 rounded" data-status="open">Open</button>
       <button class="tab-btn px-5 py-1 bg-gray-200 rounded" data-status="closed">Closed</button>
     </section>
 
-    <!-- count section  -->
+    
      <section class="bg-white shadow mt-2 mx-4 p-4 rounded flex justify-between items-center">
   <div class="flex items-center gap-4">
     <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
@@ -94,12 +93,12 @@
   </div>
 </section>
 
-    <!-- ISSUES GRID  -->
-    <section id="issues-container" class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <!-- Cards dynamically inserted -->
+   
+        <section id="issues-container" class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      
     </section>
 
-    <!--  LOADING SPINNER  -->
+    
     <section id="loading" class="hidden text-center my-8">
       <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mx-auto animate-spin"></div>
       <p class="mt-2 text-gray-500">Loading...</p>
@@ -107,16 +106,19 @@
 
   </section>
 
-  <!--  MODAL  -->
+  
   <section id="modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
   <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg relative">
     
-    <h2 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2">Issue Title</h2>
+<h2 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2">Issue Title</h2>
     
     <div class="flex items-center gap-2 mb-4 text-sm">
       <span class="bg-green-500 text-white px-3 py-0.5 rounded-full font-semibold">Opened</span>
       <span id="modal-meta" class="text-gray-400">• Opened by User • Date</span>
     </div>
+
+
+
 
     <div id="modal-tags" class="flex gap-2 mb-6">
       </div>

@@ -1,4 +1,4 @@
-/* ================= LOGIN FUNCTIONALITY ================= */
+
 
 let allIssues = [];
 
@@ -214,6 +214,8 @@ function openIssueModal(issue) {
 
   modal.classList.remove("hidden"); 
 }
+
+
 
 
 document.getElementById("closeModal").onclick = () => {
