@@ -98,14 +98,37 @@
   </section>
 
   <!--  MODAL  -->
-  <section id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-6 rounded shadow-md w-full max-w-lg relative">
-      <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-900 font-bold">&times;</button>
-      <h2 class="text-xl font-bold mb-2" id="modal-title"></h2>
-      <p id="modal-desc" class="mb-2"></p>
-      <p id="modal-info" class="text-gray-600 text-sm"></p>
+  <section id="modal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg relative">
+    
+    <h2 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2">Issue Title</h2>
+    
+    <div class="flex items-center gap-2 mb-4 text-sm">
+      <span class="bg-green-500 text-white px-3 py-0.5 rounded-full font-semibold">Opened</span>
+      <span id="modal-meta" class="text-gray-400">• Opened by User • Date</span>
     </div>
-  </section>
+
+    <div id="modal-tags" class="flex gap-2 mb-6">
+      </div>
+
+    <p id="modal-desc" class="text-gray-600 mb-8 leading-relaxed">Description...</p>
+
+    <div class="bg-gray-50 rounded-xl p-5 flex justify-between items-center mb-6">
+      <div>
+        <p class="text-gray-400 text-xs uppercase font-bold mb-1">Assignee:</p>
+        <p id="modal-assignee" class="font-bold text-gray-800 text-lg">Name</p>
+      </div>
+      <div class="text-right">
+        <p class="text-gray-400 text-xs uppercase font-bold mb-1">Priority:</p>
+        <span id="modal-priority" class="bg-red-500 text-white px-4 py-1 rounded-lg text-xs font-bold uppercase">High</span>
+      </div>
+    </div>
+
+    <div class="flex justify-end">
+      <button id="closeModal" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-2.5 rounded-xl font-bold transition-all">Close</button>
+    </div>
+  </div>
+</section>
 <script src="./script.js"></script>
 </body>
 </html>
